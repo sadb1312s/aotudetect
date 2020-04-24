@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+    <bean id = "newEngine" class="com.company.planes.JetEngine"/>
+    <bean id = "oldEngine" class="com.company.planes.OldEngine"/>
+
+    <bean id = "new" class="com.company.planes.Plane" autowire="autodetect">
+        <property name="model" value="su57"/>
+    </bean>
+    <bean id = "old" class="com.company.planes.OldPlane" autowire="autodetect"/>
+
+</beans>
